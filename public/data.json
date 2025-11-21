@@ -1,0 +1,177 @@
+{
+  "works": [
+    {
+      "id": "qanoti-barchasida",
+      "title": "Qanoti barchasida",
+      "englishTitle": "In All Affairs",
+      "year": 1990,
+      "description": "Tog'ay Murod'ning falsafiy she'riyatlari va o'ylanmalari to'plami"
+    },
+    {
+      "id": "umr-yolida",
+      "title": "Umr yo'lida",
+      "englishTitle": "Life's Path",
+      "year": 1995,
+      "description": "Mavjudlikning ma'nosi haqida esselari va she'rlari"
+    },
+    {
+      "id": "chin-sogi",
+      "title": "Chin so'g'i",
+      "englishTitle": "True Love",
+      "year": 2000,
+      "description": "Sevgi va tabiat haqidagi lirik she'rlar to'plami"
+    }
+  ],
+  "words": [
+    {
+      "id": 1,
+      "word": "umr",
+      "lemma": "umr",
+      "partOfSpeech": "ot",
+      "meaning": "hayot, vujud davomiyligi",
+      "examples": [
+        {
+          "text": "Umr yo'lida haqiqatni izla.",
+          "translation": "Hayotning yo'lida haqiqatni qidiring",
+          "workId": "umr-yolida",
+          "workTitle": "Umr yo'lida"
+        },
+        {
+          "text": "Umrim to'liq ishlar bilan.",
+          "translation": "Mening hayotim ish-faoliyat bilan to'la",
+          "workId": "qanoti-barchasida",
+          "workTitle": "Qanoti barchasida"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "word": "qalb",
+      "lemma": "qalb",
+      "partOfSpeech": "ot",
+      "meaning": "yurak, jon",
+      "examples": [
+        {
+          "text": "Qalbim sevgilining go'zalligidan vanjina.",
+          "translation": "Mening yuragim sevgilining go'zalligidan usasi",
+          "workId": "chin-sogi",
+          "workTitle": "Chin so'g'i"
+        },
+        {
+          "text": "Qalbda nur yo'ritsang, ruh oringan bo'ladi.",
+          "translation": "Agar yurakda nur borsa, ruh sa'dga erisadi",
+          "workId": "umr-yolida",
+          "workTitle": "Umr yo'lida"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "word": "xazn",
+      "lemma": "xazn",
+      "partOfSpeech": "ot",
+      "meaning": "qayg'u, achinish",
+      "examples": [
+        {
+          "text": "Vatan xazni kim tushunadi?",
+          "translation": "Vatan qayg'usi kimni tushunadi?",
+          "workId": "umr-yolida",
+          "workTitle": "Umr yo'lida"
+        },
+        {
+          "text": "Xazn qo'lda turgan qalam yozadi.",
+          "translation": "Qayg'u qolda turgan qalam yozadi",
+          "workId": "qanoti-barchasida",
+          "workTitle": "Qanoti barchasida"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "word": "so'g'",
+      "lemma": "so'g'",
+      "partOfSpeech": "ot",
+      "meaning": "sevgi",
+      "examples": [
+        {
+          "text": "Chin so'g' o'lmas bo'lsa o'lmaydi.",
+          "translation": "Chindan sevgi o'lmasa u o'lmaydi",
+          "workId": "chin-sogi",
+          "workTitle": "Chin so'g'i"
+        },
+        {
+          "text": "So'g' olami qanchalik cheksiz?",
+          "translation": "Sevgi olami qanchalik cheksiz?",
+          "workId": "chin-sogi",
+          "workTitle": "Chin so'g'i"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "word": "vatan",
+      "lemma": "vatan",
+      "partOfSpeech": "ot",
+      "meaning": "vatandor, ota-yurt",
+      "examples": [
+        {
+          "text": "Vatan uchun jon qurbon qilish gururingh.",
+          "translation": "Vatanni uchun jon qurbon qilish shon-shuhratdir",
+          "workId": "qanoti-barchasida",
+          "workTitle": "Qanoti barchasida"
+        },
+        {
+          "text": "Vatan nuri qadamda tutulgan.",
+          "translation": "Vatan nuri har qadamda tutulgan",
+          "workId": "umr-yolida",
+          "workTitle": "Umr yo'lida"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "word": "nur",
+      "lemma": "nur",
+      "partOfSpeech": "ot",
+      "meaning": "nur, yorug'lik",
+      "examples": [
+        {
+          "text": "Nur o'z yo'lini topgandek, inson ham topadi.",
+          "translation": "Nur shuningdek insoni yo'lini topadi",
+          "workId": "umr-yolida",
+          "workTitle": "Umr yo'lida"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "word": "uchqun",
+      "lemma": "uchqun",
+      "partOfSpeech": "ot",
+      "meaning": "chiroq, alanga",
+      "examples": [
+        {
+          "text": "Uchqun kabi ko'ngilim yonib turibdi.",
+          "translation": "Mening ko'ngilim chiroq kabi yonib turadi",
+          "workId": "chin-sogi",
+          "workTitle": "Chin so'g'i"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "word": "ruh",
+      "lemma": "ruh",
+      "partOfSpeech": "ot",
+      "meaning": "jan, izli",
+      "examples": [
+        {
+          "text": "Ruh cheksizlikka intiladi.",
+          "translation": "Jan cheksizlikka intilib turadi",
+          "workId": "qanoti-barchasida",
+          "workTitle": "Qanoti barchasida"
+        }
+      ]
+    }
+  ]
+}

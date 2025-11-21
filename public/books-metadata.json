@@ -1,0 +1,44 @@
+{
+	"books": [
+		{
+			"id": "yulduzlar-mangu-yonadi",
+			"title": "Yulduzlar mangu yonadi",
+			"author": "Tog'ay Murod",
+			"year": 1976,
+			"genre": "Qissalar",
+			"path": "/docs/Tog'ay Murod. Yulduzlar mangu yonadi (qissalar).pdf",
+			"txtPath": "/txt/Togay Murod. Yulduzlar mangu yonadi (qissalar).txt",
+			"description": "Yosh avlodning hayotga bo'lgan intilishlari"
+		},
+		{
+			"id": "oydinda-yurgan-odamlar",
+			"title": "Oydinda yurgan odamlar",
+			"author": "Tog'ay Murod",
+			"year": 1980,
+			"genre": "Qissalar va hikoyalar",
+			"path": "/docs/Tog'ay_Murod_Oydinda_yurgan_odamlar_qissalar,_hikoyalar.pdf",
+			"txtPath": "/txt/T._Murod_Oydinda_yurgan_odamlar.txt",
+			"description": "Oybek nomidagi mukofot sovrindori"
+		},
+		{
+			"id": "ot-kishnagan-oqshom",
+			"title": "Ot kishnagan oqshom",
+			"author": "Tog'ay Murod",
+			"year": 2006,
+			"genre": "Qissalar",
+			"path": "/docs/Tog'ay Murod. Ot kishnagan oqshom (qissalar, 2006).pdf",
+			"txtPath": "/txt/Togay Murod. Ot kishnagan oqshom (qissalar, 2006).txt",
+			"description": "Hayot voqealari va insoniy his-tuyg'ular"
+		},
+		{
+			"id": "otamdan-qolgan-dalalar",
+			"title": "Otamdan qolgan dalalar",
+			"author": "Tog'ay Murod",
+			"year": 1978,
+			"genre": "Roman",
+			"path": "/docs/Tog'ay Murod. Otamdan qolgan dalalar (roman).pdf",
+			"txtPath": "/txt/NamDU-ARM-14413-Otamdan_qolgan_dalalar.txt",
+			"description": "Qishloq hayoti va oila qadriyatlari haqida roman"
+		}
+	]
+}
