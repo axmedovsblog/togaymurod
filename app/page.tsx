@@ -1,5 +1,6 @@
 'use client'
 
+import AnnotatedLanguageUnits from '@/components/annotated-language-units'
 import Footer from '@/components/footer'
 import Hero from '@/components/hero'
 import Navigation from '@/components/navigation'
@@ -8,7 +9,7 @@ import { useEffect, useState } from 'react'
 
 export default function Home() {
 	const [currentPage, setCurrentPage] = useState<
-		'home' | 'biography' | 'works' | 'corpus'
+		'home' | 'biography' | 'works' | 'corpus' | 'annotated'
 	>('home')
 	const [isDarkMode, setIsDarkMode] = useState(false)
 
@@ -42,7 +43,7 @@ export default function Home() {
 	}
 
 	const handlePageChange = (
-		page: 'home' | 'biography' | 'works' | 'corpus'
+		page: 'home' | 'biography' | 'works' | 'corpus' | 'annotated'
 	) => {
 		setCurrentPage(page)
 		// Smooth scroll to top when changing pages
@@ -73,15 +74,14 @@ export default function Home() {
 			<div className='flex-1 relative z-10 overflow-hidden'>
 				<div className='h-full overflow-y-auto scroll-smooth page-scroll-container'>
 					<div
-						className={`min-h-full transition-all duration-500 ease-in-out ${
-							currentPage === 'home'
+						className={`min-h-full transition-all duration-500 ease-in-out ${currentPage === 'home'
 								? 'opacity-100 translate-x-0'
 								: currentPage === 'biography'
-								? 'opacity-100 translate-x-0'
-								: currentPage === 'works'
-								? 'opacity-100 translate-x-0'
-								: 'opacity-100 translate-x-0'
-						}`}
+									? 'opacity-100 translate-x-0'
+									: currentPage === 'works'
+										? 'opacity-100 translate-x-0'
+										: 'opacity-100 translate-x-0'
+							}`}
 					>
 						{currentPage === 'home' && (
 							<div className='animate-in fade-in slide-in-from-bottom duration-500'>
@@ -103,6 +103,11 @@ export default function Home() {
 								<SearchCorpusAdvanced />
 							</div>
 						)}
+						{currentPage === 'annotated' && (
+							<div className='animate-in fade-in slide-in-from-bottom duration-500'>
+								<AnnotatedLanguageUnits />
+							</div>
+						)}
 					</div>
 				</div>
 			</div>
@@ -115,7 +120,7 @@ export default function Home() {
 function HomePage({
 	onNavigate,
 }: {
-	onNavigate: (page: 'home' | 'biography' | 'works' | 'corpus') => void
+	onNavigate: (page: 'home' | 'biography' | 'works' | 'corpus' | 'annotated') => void
 }) {
 	return (
 		<div className='relative'>
@@ -608,11 +613,9 @@ function Works() {
 						onClick={() =>
 							setSelectedBook(selectedBook === book.id ? null : book.id)
 						}
-						className={`group cursor-pointer animate-in slide-in-from-bottom duration-700 delay-${
-							(idx + 1) * 100
-						} relative transform transition-all duration-300 hover:scale-105 ${
-							selectedBook === book.id ? 'scale-105 z-10' : ''
-						}`}
+						className={`group cursor-pointer animate-in slide-in-from-bottom duration-700 delay-${(idx + 1) * 100
+							} relative transform transition-all duration-300 hover:scale-105 ${selectedBook === book.id ? 'scale-105 z-10' : ''
+							}`}
 					>
 						{/* Card Background Glow */}
 						<div className='absolute inset-0 bg-linear-to-r from-emerald-500/20 via-teal-500/20 to-cyan-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500'></div>

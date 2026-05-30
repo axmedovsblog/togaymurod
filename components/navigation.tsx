@@ -4,8 +4,8 @@ import { Menu, X } from 'lucide-react'
 import { useState } from 'react'
 
 interface NavigationProps {
-	currentPage: 'home' | 'biography' | 'works' | 'corpus'
-	onPageChange: (page: 'home' | 'biography' | 'works' | 'corpus') => void
+	currentPage: 'home' | 'biography' | 'works' | 'corpus' | 'annotated'
+	onPageChange: (page: 'home' | 'biography' | 'works' | 'corpus' | 'annotated') => void
 	isDarkMode: boolean
 	toggleDarkMode: () => void
 }
@@ -23,6 +23,7 @@ export default function Navigation({
 		{ id: 'biography', label: 'Tarjimayi hol' },
 		{ id: 'works', label: 'Asarlari' },
 		{ id: 'corpus', label: 'Korpus' },
+		{ id: 'annotated', label: 'Anotatsiyalangan til birliklari' },
 	]
 
 	const handleNavClick = (page: any) => {
@@ -47,11 +48,10 @@ export default function Navigation({
 							<button
 								key={item.id}
 								onClick={() => handleNavClick(item.id)}
-								className={`text-sm font-medium transition-colors ${
-									currentPage === item.id
+								className={`text-sm font-medium transition-colors ${currentPage === item.id
 										? 'text-primary border-b-2 border-primary pb-2'
 										: 'text-muted-foreground hover:text-foreground'
-								}`}
+									}`}
 							>
 								{item.label}
 							</button>
@@ -66,11 +66,10 @@ export default function Navigation({
 							<div className='relative w-5 h-5'>
 								{/* Sun Icon */}
 								<svg
-									className={`absolute inset-0 w-5 h-5 text-amber-500 transition-all duration-500 ${
-										isDarkMode
+									className={`absolute inset-0 w-5 h-5 text-amber-500 transition-all duration-500 ${isDarkMode
 											? 'opacity-0 rotate-90 scale-75'
 											: 'opacity-100 rotate-0 scale-100'
-									}`}
+										}`}
 									fill='none'
 									stroke='currentColor'
 									viewBox='0 0 24 24'
@@ -88,11 +87,10 @@ export default function Navigation({
 
 								{/* Moon Icon */}
 								<svg
-									className={`absolute inset-0 w-5 h-5 text-indigo-400 transition-all duration-500 ${
-										isDarkMode
+									className={`absolute inset-0 w-5 h-5 text-indigo-400 transition-all duration-500 ${isDarkMode
 											? 'opacity-100 rotate-0 scale-100'
 											: 'opacity-0 rotate-90 scale-75'
-									}`}
+										}`}
 									fill='none'
 									stroke='currentColor'
 									viewBox='0 0 24 24'
@@ -114,11 +112,10 @@ export default function Navigation({
 							<div className='relative w-5 h-5'>
 								{/* Sun Icon */}
 								<svg
-									className={`absolute inset-0 w-5 h-5 text-amber-500 transition-all duration-500 ${
-										isDarkMode
+									className={`absolute inset-0 w-5 h-5 text-amber-500 transition-all duration-500 ${isDarkMode
 											? 'opacity-0 rotate-90 scale-75'
 											: 'opacity-100 rotate-0 scale-100'
-									}`}
+										}`}
 									fill='none'
 									stroke='currentColor'
 									viewBox='0 0 24 24'
@@ -136,11 +133,10 @@ export default function Navigation({
 
 								{/* Moon Icon */}
 								<svg
-									className={`absolute inset-0 w-5 h-5 text-indigo-400 transition-all duration-500 ${
-										isDarkMode
+									className={`absolute inset-0 w-5 h-5 text-indigo-400 transition-all duration-500 ${isDarkMode
 											? 'opacity-100 rotate-0 scale-100'
 											: 'opacity-0 rotate-90 scale-75'
-									}`}
+										}`}
 									fill='none'
 									stroke='currentColor'
 									viewBox='0 0 24 24'
@@ -167,11 +163,10 @@ export default function Navigation({
 							<button
 								key={item.id}
 								onClick={() => handleNavClick(item.id)}
-								className={`block w-full text-left px-4 py-2 rounded text-sm font-medium transition-colors ${
-									currentPage === item.id
+								className={`block w-full text-left px-4 py-2 rounded text-sm font-medium transition-colors ${currentPage === item.id
 										? 'bg-primary text-primary-foreground'
 										: 'text-foreground hover:bg-muted'
-								}`}
+									}`}
 							>
 								{item.label}
 							</button>
