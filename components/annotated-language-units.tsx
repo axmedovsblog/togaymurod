@@ -1,8 +1,8 @@
 'use client'
 
 import { annotatedData, TilBirligi } from '@/lib/annotated-data'
-import * as HoverCard from '@radix-ui/react-hover-card'
-import { BookOpen, Lightbulb, Search, Tag } from 'lucide-react'
+import * as Popover from '@radix-ui/react-popover'
+import { BookOpen, Lightbulb, Search, Tag, X } from 'lucide-react'
 import { useMemo, useState } from 'react'
 
 interface UnitWithAsar extends TilBirligi {
@@ -160,36 +160,41 @@ export default function AnnotatedLanguageUnits() {
               {filtered.map((u, i) => {
                 const key = `${u.asar}-${u.id}`
                 return (
-                  <tr key={key} className='relative transition-all duration-200 group cursor-pointer'>
-                    <td className='px-6 py-4 text-sm text-slate-500 dark:text-slate-400 font-medium'>{i + 1}</td>
-                    <td className='px-6 py-4'>
-                      <HoverCard.Root openDelay={100} closeDelay={100}>
-                        <HoverCard.Trigger asChild>
-                          <span className='text-base font-semibold text-slate-800 dark:text-slate-200 group-hover:text-violet-700 dark:group-hover:text-violet-400 transition-colors cursor-pointer'>{u.til_birligi}</span>
-                        </HoverCard.Trigger>
-                        <HoverCard.Portal>
-                          <HoverCard.Content
-                            className='z-50 bg-white dark:bg-slate-800 rounded-xl shadow-2xl border border-violet-200 dark:border-violet-700 p-4 data-[side=bottom]:animate-in data-[side=bottom]:slide-in-from-top-2 data-[side=top]:animate-in data-[side=top]:slide-in-from-bottom-2'
-                            side='bottom'
-                            align='start'
-                            sideOffset={6}
-                            collisionPadding={16}
-                            avoidCollisions={true}
-                          >
-                            <AnnotationContent unit={u} />
-                          </HoverCard.Content>
-                        </HoverCard.Portal>
-                      </HoverCard.Root>
-                    </td>
-                    <td className='px-6 py-4'>
-                      <span className={`inline-flex px-3 py-1 text-xs font-semibold rounded-full border ${getTypeColor(u.turi)}`}>{u.turi}</span>
-                    </td>
-                    <td className='px-6 py-4 hidden md:table-cell'>
-                      <span className='text-sm text-slate-600 dark:text-slate-400 flex items-center gap-2'>
-                        <BookOpen className='w-4 h-4 text-violet-500' />{u.asar}
-                      </span>
-                    </td>
-                  </tr>
+                  <Popover.Root key={key}>
+                    <Popover.Trigger asChild>
+                      <tr className='relative transition-all duration-200 group cursor-pointer'>
+                        <td className='px-6 py-4 text-sm text-slate-500 dark:text-slate-400 font-medium'>{i + 1}</td>
+                        <td className='px-6 py-4'>
+                          <span className='text-base font-semibold text-slate-800 dark:text-slate-200 group-hover:text-violet-700 dark:group-hover:text-violet-400 transition-colors'>{u.til_birligi}</span>
+                        </td>
+                        <td className='px-6 py-4'>
+                          <span className={`inline-flex px-3 py-1 text-xs font-semibold rounded-full border ${getTypeColor(u.turi)}`}>{u.turi}</span>
+                        </td>
+                        <td className='px-6 py-4 hidden md:table-cell'>
+                          <span className='text-sm text-slate-600 dark:text-slate-400 flex items-center gap-2'>
+                            <BookOpen className='w-4 h-4 text-violet-500' />{u.asar}
+                          </span>
+                        </td>
+                      </tr>
+                    </Popover.Trigger>
+                    <Popover.Portal>
+                      <Popover.Content
+                        className='z-50 bg-white dark:bg-slate-800 rounded-xl shadow-2xl border border-violet-200 dark:border-violet-700 p-4 data-[side=bottom]:animate-in data-[side=bottom]:slide-in-from-top-2 data-[side=top]:animate-in data-[side=top]:slide-in-from-bottom-2'
+                        side='bottom'
+                        align='start'
+                        sideOffset={6}
+                        collisionPadding={16}
+                        avoidCollisions={true}
+                      >
+                        <div className='relative'>
+                          <Popover.Close className='absolute -top-1 -right-1 w-6 h-6 rounded-full bg-red-100 dark:bg-red-900/50 text-red-600 dark:text-red-400 flex items-center justify-center hover:bg-red-200 transition-all cursor-pointer'>
+                            <X className='w-3 h-3' />
+                          </Popover.Close>
+                          <AnnotationContent unit={u} />
+                        </div>
+                      </Popover.Content>
+                    </Popover.Portal>
+                  </Popover.Root>
                 )
               })}
               {filtered.length === 0 && (
